@@ -1,0 +1,26 @@
+<h1>Babies index</h1>
+
+<ul>
+<% @babies.each do |baby| %>
+
+  <li>
+  <%= link_to baby.name, babies_id_path(baby) %> </li>
+         
+         <% sum_veces =0  %>
+         <% sum_ml = 0 %>
+    <% baby.breastfeedings.each do |bfn|%>
+    
+    
+          
+        <% bfn.created_at  %>
+        <% sum_veces += 1 %>
+        <% sum_ml += bfn.volume %>
+
+    
+    <% end  %>
+        Breastfeeding total times: <%= sum_veces  %> <br>
+        Total ml: <%= sum_ml  %> <br> <br>
+        
+        <%= link_to 'delete', delete_baby_path(baby), method: :delete, data:{confirm: 'Are you sure?'} %>
+<% end  %>
+</ul> 

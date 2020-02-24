@@ -1,0 +1,17 @@
+<h1>Lista bebés </h1>
+<h2><%= @baby.name %></h2>
+
+
+
+
+<% @baby.breastfeedings.each do |bab| %>
+   <p>
+
+        Feeding ID <%= bab.id  %> <br>
+        Baby ID <%= bab.baby_id  %> <br>
+        Volume <%= bab.volume  %> <br>
+        Created at: <%= bab.created_at  %> <br>
+        Feeding Time <%= bab.feeding_time %> <br>
+   </p>
+<% end %>
+

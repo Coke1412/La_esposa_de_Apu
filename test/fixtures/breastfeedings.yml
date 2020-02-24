@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  baby_id: 1
+  volume: 1
+  feeding_time: 1
+  baby: one
+
+two:
+  baby_id: 1
+  volume: 1
+  feeding_time: 1
+  baby: two
